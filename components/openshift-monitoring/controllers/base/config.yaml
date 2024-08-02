@@ -1,6 +1,27 @@
+prometheusOperator: {}
 prometheusK8s:
   retention: 24h
+  volumeClaimTemplate:
+    spec:
+      resources:
+        requests:
+          storage: 5Gi
   resources:
     requests:
       cpu: 200m
       memory: 1Gi
+alertmanagerMain:
+  volumeClaimTemplate:
+    spec:
+      resources:
+        requests:
+          storage: 1Gi # Adjust storage size for Alertmanager
+kubeStateMetrics: {}
+openshiftStateMetrics: {}
+grafana: {}
+telemeterClient: {}
+k8sPrometheusAdapter: {}
+thanosQuerier: {}
+# Enable user workload monitoring
+techPreviewUserWorkload:
+  enabled: true
