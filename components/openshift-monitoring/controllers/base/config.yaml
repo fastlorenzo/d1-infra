@@ -1,4 +1,4 @@
-prometheus:
+prometheusK8s:
   retention: 24h
   resources:
     requests:
