@@ -5,6 +5,7 @@ resources:
   - namespace.yaml
   - kube-prometheus-stack.yaml
   - metrics-server.yaml
+  - scc.yaml
 configMapGenerator:
   - name: flux-kube-state-metrics-config
     files:
